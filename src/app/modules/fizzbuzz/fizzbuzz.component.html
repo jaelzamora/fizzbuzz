@@ -1,0 +1,14 @@
+<div class="fizzbuzz-container">
+    <h2>Welcome to FizzBuzz</h2>
+    <p>Instructions: press the button to make einstein say a starting number</p>
+
+    <div (click)="buttonClick()" class="einstein-button">
+        <img src="https://img.icons8.com/ios/500/einstein.png" alt="">
+    </div>
+    <div class="start-end-container">
+        <p><span>Start: </span> {{fizzbuzz.startNumber ? fizzbuzz.startNumber : "..."}}</p>
+        <p><span>End: </span> {{fizzbuzz.endNumber ? fizzbuzz.endNumber : "..."}}</p>
+    </div>
+    <p *ngIf="fizzBuzzResults" class="results">{{fizzBuzzResults}}</p>
+
+</div>
