@@ -6,12 +6,22 @@
         <img src="https://img.icons8.com/ios/500/einstein.png" alt="">
     </div>
     <div class="start-end-container">
-        <p><span>Start: </span> {{fizzbuzz.startNumber ? fizzbuzz.startNumber : "..."}}</p>
-        <p><span>End: </span> {{fizzbuzz.endNumber ? fizzbuzz.endNumber : "..."}}</p>
+        <p><span>Start: </span> {{fizzbuzz.startNumber !== 0 ? fizzbuzz.startNumber : "..."}}</p>
+        <p><span>End: </span> {{fizzbuzz.endNumber !== 0 ? fizzbuzz.endNumber : "..."}}</p>
+
     </div>
 
+    <button *ngIf="fizzBuzzResults && !showError" (click)="download()" mat-raised-button class="download-button">Download File
+        <span class="material-icons">
+            file_download
+        </span>
+    </button>
+
+    <h2 *ngIf="fizzBuzzResults && !showError">Results:</h2>
+
     <p *ngIf="showError" class="error">Error</p>
-    
+
     <p *ngIf="fizzBuzzResults" class="results">{{fizzBuzzResults}}</p>
+
 
 </div>

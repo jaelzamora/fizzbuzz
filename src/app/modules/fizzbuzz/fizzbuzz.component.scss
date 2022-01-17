@@ -5,23 +5,26 @@
     margin-top: 40px;
     p {
         font-size: 1rem;
-        margin-bottom: 40px;
     }
 
     .einstein-button {
         width: 120px;
         height: 120px;
         background: #e6e9cb;
-        margin: auto;
+        margin: 25px auto 30px auto;
         border-radius: 120px;
         padding: 20px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        margin-bottom: 50px;
 
         img {
             width: 100%;
         }
     }
+    .einstein-button:active {
+        box-shadow: none;
+        transform: translate(0, 4px);
+    }
+
     .start-end-container {
         display: flex;
         justify-content: space-between;
@@ -40,8 +43,8 @@
         width: 300px;
         margin: auto;
     }
-    .einstein-button:active {
-        box-shadow: none;
-        transform: translate(0, 4px);
+
+    .download-button {
+        margin: 10px 0 20px 0;
     }
 }
