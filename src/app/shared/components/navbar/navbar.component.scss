@@ -17,3 +17,22 @@
         margin: 0;
     }
 }
+
+
+/*
+    /////////////////////
+    ///// RESPONSIVE ////
+    /////////////////////
+
+*/
+
+@media(max-width: 460px) {
+    .navbar-container {
+        h1 {
+            font-size: 50px;
+        }
+        img {
+            width: 40px;
+        }
+    }
+}

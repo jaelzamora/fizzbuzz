@@ -9,6 +9,9 @@
         <p><span>Start: </span> {{fizzbuzz.startNumber ? fizzbuzz.startNumber : "..."}}</p>
         <p><span>End: </span> {{fizzbuzz.endNumber ? fizzbuzz.endNumber : "..."}}</p>
     </div>
+
+    <p *ngIf="showError" class="error">Error</p>
+    
     <p *ngIf="fizzBuzzResults" class="results">{{fizzBuzzResults}}</p>
 
 </div>

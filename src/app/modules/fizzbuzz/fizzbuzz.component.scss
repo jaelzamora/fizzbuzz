@@ -23,7 +23,18 @@
         }
     }
     .start-end-container {
-
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
+        margin: auto;
+        span {
+            font-weight: 500;
+        }
+    }
+    .error {
+        font-family: fantasy;
+        color: #f18686;
+        font-size: 2rem;
     }
     .results {
         width: 300px;

@@ -9,9 +9,10 @@ import { IFizzBuzz } from './models/fizzbuzz.model';
 export class FizzbuzzComponent implements OnInit {
 
   defaultEndNumber = 100;
+  showError = false;
 
   fizzbuzz: IFizzBuzz;
-  fizzBuzzResults: string = "";
+  fizzBuzzResults = "";
 
   constructor() { }
 
@@ -24,15 +25,16 @@ export class FizzbuzzComponent implements OnInit {
 
   // Generate random number on click between default end number plus 20
   buttonClick() {
+    this.showError = false;
     this.fizzBuzzResults = "";
     this.fizzbuzz= { endNumber: this.getEndNumber(), startNumber: Math.floor(Math.random() * this.defaultEndNumber + 20)};
     this.startFizzBuzz();
   }
 
   startFizzBuzz() {
-
     if ( this.fizzbuzz.startNumber && this.fizzbuzz.endNumber && this.fizzbuzz.startNumber >= this.fizzbuzz.endNumber ) {
-      this.fizzBuzzResults = "The starting number must be smaller than the end number! Start: " + this.fizzbuzz.startNumber + " End: " + this.fizzbuzz.endNumber;
+      this.fizzBuzzResults = "The starting number must be smaller than the end number!";
+      this.showError = true;
     } else {
 
       for (let i = this.fizzbuzz.startNumber; i < this.fizzbuzz.endNumber; i++) {
@@ -43,7 +45,7 @@ export class FizzbuzzComponent implements OnInit {
         } else if (i % 5 === 0) {
           this.fizzBuzzResults = this.fizzBuzzResults.concat('buzz, ');
         } else {
-          this.fizzBuzzResults = this.fizzBuzzResults.concat(i + ' ,');
+          this.fizzBuzzResults = this.fizzBuzzResults.concat(i + ', ');
         }
       }
       
