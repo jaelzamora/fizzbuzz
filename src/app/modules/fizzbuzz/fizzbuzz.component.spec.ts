@@ -22,4 +22,25 @@ describe('FizzbuzzComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create startnumber', () => {
+    component.buttonClick();
+    expect(component.fizzbuzz.startNumber).toBeTruthy();
+  });
+
+  it('should create end number', () => {
+    component.buttonClick();
+    expect(component.fizzbuzz.endNumber).toBeTruthy();
+  });
+
+  it('start number should be bigger than end number', () => {
+    component.buttonClick();
+    expect(component.fizzbuzz.startNumber).toBeLessThan(component.fizzbuzz.endNumber);
+  });
+
+  it('should create fizzbuzz results', () => {
+    component.buttonClick();
+    expect(component.fizzBuzzResults.length).toBeGreaterThan(0);
+  });
+
 });
